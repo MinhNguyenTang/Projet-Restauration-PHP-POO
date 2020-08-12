@@ -39,7 +39,7 @@
 						</div>
 						<nav class="main_nav">
 							<ul class="d-flex flex-row align-items-center justify-content-start">
-                <?php if(!isset($_SESSION['email'])) {?>
+                <?php if(!isset($_SESSION)) {?>
 								<li><a href="index.php">home</a></li>
 								<li><a href="about.php">about us</a></li>
 								<li><a href="menu.php">menu</a></li>
@@ -87,7 +87,7 @@
 	<div class="menu trans_800">
 		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
 			<ul>
-        <?php if(!isset($_SESSION['email'])) {?>
+        <?php if(!isset($_SESSION)) {?>
 				<li><a href="index.php">home</a></li>
 				<li><a href="about.php">about us</a></li>
 				<li><a href="menu.php">menu</a></li>
