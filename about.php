@@ -35,6 +35,7 @@
 						</div>
 						<nav class="main_nav">
 							<ul class="d-flex flex-row align-items-center justify-content-start">
+								<?php if(!isset($_SESSION)) ?>
 								<li><a href="index.php">home</a></li>
 								<li><a href="about.php">about us</a></li>
 								<li><a href="menu.php">menu</a></li>
@@ -42,6 +43,14 @@
 								<li><a href="blog.php">blog</a></li>
 								<li><a href="contact.php">contact</a></li>
 								<li><a href="login_form.php">login</a></li>
+							<?php }
+							if(isset($_SESSION['email'])) {?>
+								<li><a href="index.php">home</a></li>
+								<li><a href="about.php">about us</a></li>
+								<li><a href="menu.php">menu</a></li>
+								<li><a href="contact.php">contact</a></li>
+								<li><a href="account.php">my account</a></li>
+								<li><a href="../processing/log-out.php">log out</a></li>
 							</ul>
 						</nav>
 						<div class="reservations_phone ml-auto">Reservations: +34 586 778 8892</div>
@@ -73,12 +82,22 @@
 	<div class="menu trans_800">
 		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
 			<ul>
+				<?php if(!isset($_SESSION)) ?>
 				<li><a href="index.php">home</a></li>
 				<li><a href="about.php">about us</a></li>
 				<li><a href="menu.php">menu</a></li>
 				<li><a href="#">delivery</a></li>
 				<li><a href="blog.php">blog</a></li>
 				<li><a href="contact.php">contact</a></li>
+				<li><a href="login_form.php">login</a></li>
+			<?php } ?>
+			   <?php if(isset($_SESSION['email'])) {?>
+					<li><a href="index.php">home</a></li>
+	 				<li><a href="about.php">about us</a></li>
+	 				<li><a href="menu.php">menu</a></li>
+					<li><a href="contact.php">contact</a></li>
+					<li><a href="account.php">my account</a></li>
+					<li><a href="../processing/log-out.php">log out</a></li>
 			</ul>
 		</div>
 		<div class="menu_reservations_phone ml-auto">Reservations: +34 586 778 8892</div>
