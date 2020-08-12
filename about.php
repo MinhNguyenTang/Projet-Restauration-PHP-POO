@@ -51,6 +51,7 @@
 								<li><a href="contact.php">contact</a></li>
 								<li><a href="account.php">my account</a></li>
 								<li><a href="../processing/log-out.php">log out</a></li>
+							<?php } ?>
 							</ul>
 						</nav>
 						<div class="reservations_phone ml-auto">Reservations: +34 586 778 8892</div>
